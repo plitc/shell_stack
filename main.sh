@@ -29,7 +29,7 @@
 ### // LICENSE (BSD 2-Clause) ###
 
 ADIR="$PWD"
-source "$ADIR"/functions/darwin.sh
+. "$ADIR"/functions/darwin.sh
 
 ### ### ### PLITC // ### ### ###
 
