@@ -38,7 +38,11 @@ ADIR="$PWD"
 ### ### ### ### ### ### ### ### ###
 ### ### ### ### ### ### ### ### ###
 
-TEST
+# my_script
+
+PRINTRED test1
+PRINTYELLOW test2
+PRINTGREEN test3
 
 TEST
 

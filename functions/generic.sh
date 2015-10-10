@@ -2,7 +2,7 @@
 
 ### LICENSE (BSD 2-Clause) // ###
 #
-# Copyright (c) 2014-2015, Daniel Plominski (Plominski IT Consulting)
+# Copyright (c) 2015, Daniel Plominski (Plominski IT Consulting)
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without modification,
@@ -30,13 +30,21 @@
 
 ### ### ### PLITC // ### ### ###
 
-# include functions
-INCDIR="$PWD"
-. "$INCDIR"/functions/generic.sh
-. "$INCDIR"/functions/linux.sh
-. "$INCDIR"/functions/freebsd.sh
-. "$INCDIR"/functions/freenas.sh
-. "$INCDIR"/functions/osx.sh
+### ### ### ####### ### ### ###
+### ### ### GENERIC ### ### ###
+### ### ### ####### ### ### ###
+
+PRINTRED(){
+   printf "\033[1;31m"$@"\033[0m\n"
+}
+
+PRINTYELLOW(){
+   printf "\033[1;33m"$@"\033[0m\n"
+}
+
+PRINTGREEN(){
+   printf "\033[1;32m"$@"\033[0m\n"
+}
 
 ### ### ### // PLITC ### ### ###
 # EOF
