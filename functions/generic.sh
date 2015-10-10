@@ -34,6 +34,10 @@
 ### ### ### GENERIC ### ### ###
 ### ### ### ####### ### ### ###
 
+HELLOWORLD(){
+   echo "hello world"
+}
+
 PRINTRED(){
    printf "\033[1;31m%s\033[0m\n" "$@"
 }
