@@ -9,13 +9,17 @@ ADIR="$PWD"
 # my_script
 
 
-
+# example: text in red
 PRINTRED test1
+
+# example: text in yellow
 PRINTYELLOW test2
+
+# example: text in green
 PRINTGREEN test3
 
-HELLOWORLD
-
+# example: hello world & spinner
+(HELLOWORLD; sleep 5) & SPINNER $!
 
 
 ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###

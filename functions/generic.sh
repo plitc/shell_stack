@@ -34,20 +34,39 @@
 ### ### ### GENERIC ### ### ###
 ### ### ### ####### ### ### ###
 
-HELLOWORLD(){
+HELLOWORLD()
+{
    echo "hello world"
 }
 
-PRINTRED(){
+PRINTRED()
+{
    printf "\033[1;31m%s\033[0m\n" "$@"
 }
 
-PRINTYELLOW(){
+PRINTYELLOW()
+{
    printf "\033[1;33m%s\033[0m\n" "$@"
 }
 
-PRINTGREEN(){
+PRINTGREEN()
+{
    printf "\033[1;32m%s\033[0m\n" "$@"
+}
+
+SPINNER()
+{
+   local pid=$1
+   local delay=0.01
+   local spinstr='|/-\'
+   while [ "$(ps a | awk '{print $1}' | grep $pid)" ]; do
+         local temp=${spinstr#?}
+         printf " [%c]  " "$spinstr"
+         local spinstr=$temp${spinstr%"$temp"}
+         sleep $delay
+         printf "\b\b\b\b\b\b"
+   done
+   printf "    \b\b\b\b"
 }
 
 ### ### ### // PLITC ### ### ###
